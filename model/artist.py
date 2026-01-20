@@ -4,6 +4,10 @@ from dataclasses import dataclass
 class Artist:
     id : int
     name : str
+    genre: set
+
+    def add_genre(self,g):
+        self.genre.add(g)
 
     def __str__(self):
         return f"{self.id}, {self.name}"
